@@ -1,0 +1,48 @@
+cabal-version:      2.4
+name:               church1936
+version:            0.1.0
+synopsis: Lambda calculus implemented directly from Alonzo Church's 1936 paper
+
+homepage:           https://github.com/alfreb/church1936
+bug-reports:        https://github.com/alfreb/church1936/issues
+license:            MIT
+license-file:       LICENSE
+author:             Alfred Bratterud
+maintainer:         alfred.bratterud@gmail.com
+category:           Math
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  Church1936, HaskellNumerals
+    build-depends:    HUnit >= 1.6.2.0,
+                      QuickCheck >= 2.14.2,
+                      base ^>=4.14.3.0,
+                      containers >= 0.6.5.1,
+                      hspec >= 2.10.6
+
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable church1936
+    main-is:          Main.hs
+    build-depends:    HUnit >= 1.6.2.0,
+                      hspec >= 2.10.6,
+                      base ^>=4.14.3.0,
+                      church1936,
+                      containers >= 0.6.5.1,
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+test-suite church1936-test
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Spec.hs
+    other-modules:    Church1936Spec,
+                      HaskellNumeralsSpec
+    build-depends:    HUnit >= 1.6.2.0,
+                      QuickCheck >= 2.14.2,
+                      base ^>=4.14.3.0,
+                      hspec >= 2.10.6,
+                      church1936
+
