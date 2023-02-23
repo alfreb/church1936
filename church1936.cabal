@@ -16,7 +16,7 @@ library
     exposed-modules:  Church1936, HaskellNumerals
     build-depends:    HUnit >= 1.6.2.0,
                       QuickCheck >= 2.14.2,
-                      base ^>=4.14.3.0,
+                      base ^>=4.13.0.0,
                       containers >= 0.6.5.1,
                       hspec >= 2.10.6
 
@@ -27,7 +27,7 @@ executable church1936
     main-is:          Main.hs
     build-depends:    HUnit >= 1.6.2.0,
                       hspec >= 2.10.6,
-                      base ^>=4.14.3.0,
+                      base ^>=4.13.0.0,
                       church1936,
                       containers >= 0.6.5.1,
     hs-source-dirs:   app
@@ -42,7 +42,7 @@ test-suite church1936-test
                       HaskellNumeralsSpec
     build-depends:    HUnit >= 1.6.2.0,
                       QuickCheck >= 2.14.2,
-                      base ^>=4.14.3.0,
+                      base ^>=4.13.0.0,
                       hspec >= 2.10.6,
                       church1936
 
