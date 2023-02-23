@@ -37,7 +37,8 @@ jobs:
       run: |
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
-        cabal install hspec-discover
+    - name: Install test dependencies
+      run: cabal install hspec-discover	
     - name: Build
       run: cabal build --enable-tests --enable-benchmarks all
     - name: Run tests
