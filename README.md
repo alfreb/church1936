@@ -1,6 +1,8 @@
 # church1936
 Lambda calculus implemented directly from Alonzo Church's 1936 paper “An Unsolvable Problem of Elementary Number Theory.” _American Journal of Mathematics_, vol. 58, no. 2, 1936, pp. 345–63. JSTOR, https://doi.org/10.2307/2371045.
 
+[![Haskell CI](https://github.com/alfreb/church1936/actions/workflows/haskell.yml/badge.svg)](https://github.com/alfreb/church1936/actions/workflows/haskell.yml)
+
 Build and run unit tests:
 ```
 $ cabal test
